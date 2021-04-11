@@ -8,6 +8,7 @@ import {SharedService} from 'src/app/shared.service';
   styleUrls: ['./show-skill.component.css']
 })
 export class ShowSkillComponent implements OnInit {
+  
 
   constructor(private service:SharedService) { }
 
@@ -15,7 +16,7 @@ export class ShowSkillComponent implements OnInit {
   CandidateSkillsList:any=[];
 
   ModalTitle:string="";
-  ActiveAddCandSkillComp:boolean=false;
+  AddRemoveSkillComponent: boolean=false;
   CandItem:any;
   
   ngOnInit(): void {
@@ -35,7 +36,7 @@ addClick(){
    
   }
   this.ModalTitle="Add New Candidate Skills";
-  this.ActiveAddCandSkillComp=true;
+  this.AddRemoveSkillComponent=true;
 }
 
 deleteClick(item:any){
@@ -49,7 +50,7 @@ if(confirm("Are you sure you want to Delete candidate Skill?")){
 }
 
 closeClick(){
-  this.ActiveAddCandSkillComp=false;
+  this.AddRemoveSkillComponent=false;
   this.fetchCandSkillList();
 }
 
@@ -60,7 +61,7 @@ refreshCandList(){
 }
 
 fetchCandSkillList(){ 
-  alert("I got here");
+  //alert("I got here");
 }
 
 submit(){ 
