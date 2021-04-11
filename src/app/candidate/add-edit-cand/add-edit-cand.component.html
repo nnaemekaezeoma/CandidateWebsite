@@ -1,0 +1,78 @@
+<div class="form-group" style="margin: 5%; align-content: center;">
+    <div class="mb-3">
+    <label calss="form-label">FirstName</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="FirstName"
+        placeholder="Enter Candidate First Name">
+    </div>
+<div class="mb-3">
+    <label calss="form-label">SurName</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="SurName"
+        placeholder="Enter Candidate SurName">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Date Of Birth</label>
+    
+        <input type="date" class="form-control" [(ngModel)]="DateOfBirth"
+        placeholder="Enter Candidate Date Of Birth">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Address</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="Address1"
+        placeholder="Enter Candidate Address">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Town</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="Town"
+        placeholder="Enter Candidate Town">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">PostCode</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="PostCode"
+        placeholder="Enter Candidate PostCode">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Country</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="Country"
+        placeholder="Enter Candidate Country">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Mobile Phone</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="PhoneMobile"
+        placeholder="Enter Candidate Mobile">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Work Phone</label>
+    
+        <input type="text" class="form-control" [(ngModel)]="PhoneHome"
+        placeholder="Enter Candidate Home Phone">
+    </div>
+
+<div class="mb-3">
+    <label calss="form-label">Home Phone</label>
+ 
+        <input type="text" class="form-control" [(ngModel)]="PhoneWork"
+        placeholder="Enter Candidate Work Phone">
+
+</div>
+
+<button (click)="addCandidate()" *ngIf="cand.ID==0" class="btn btn-danger">
+    Add
+</button>
+<button (click)="updateCandidate()" *ngIf="cand.ID!=0 && cand.recd=='edit'" class="btn btn-danger">
+    Update
+</button>
+
